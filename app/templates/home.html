@@ -1,0 +1,34 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-success" role="">
+            <ul class=flashes style="list-style-type: none;">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+             </ul>
+    </div>
+    
+  {% endif %}
+{% endwith %}
+<div class="container">
+        <div class="row">
+                {% if  name %}
+                <h1><center> Welcome Mr. {{name}} </center></h1>
+                {% else %}
+                <h1> <center> Home Page </center></h1><br>
+                {% endif %}
+        </div><br>
+        
+        <button class="btn btn-primary" onclick="{()=>{
+                        alert('Hello');
+                }}">Magic </button>
+</div>
+{% endblock %}
+{% block javascript %}
+<script src='text/javascript'>
+        alert("Hello")
+</script>
+        
+{% endblock %}

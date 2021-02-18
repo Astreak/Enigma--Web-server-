@@ -1,0 +1,43 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-warning" role="">
+            <ul class=flashes style="list-style-type: none;">
+                {% for message in messages %}
+                <li><b>{{ message }}></b></li>
+                {% endfor %}
+             </ul>
+        </div>
+    
+        {% endif %}
+        {% endwith %}
+        <div class="container">
+                <h1><u>Register</u></h1><br>
+                
+                
+                <form action="/register" method="POST">
+                        <div class="form-group col-sm-5">
+                                <label> Username </label>
+                                <input class="form-control" name='username' type='text'>
+                        </div><br>
+                         <div class="form-group col-sm-5">
+                                <label> Email </label>
+                                <input class="form-control" name='email' type='email'>
+                        </div><br>
+                         <div class="form-group col-sm-5">
+                                <label> Password </label>
+                                <input class="form-control" name='password' type='password'>
+                        </div><br>
+                        <button class="btn btn-primary" type="submit">Sign Up</button>
+                         
+                </form>
+
+                <br>
+                <div class="row">
+                        <a href='/register_google'><button class='btn btn-success'>Sigup using google</button></a>
+                </div>
+                
+        </div>
+
+{% endblock %}

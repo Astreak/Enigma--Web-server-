@@ -1,2 +1,2 @@
 # Enigma--Web-server-
-## Web Server (auth) of Enigma(Linkedin scrapper)
+## Web Server (auth) of Enigma(LLM integration)

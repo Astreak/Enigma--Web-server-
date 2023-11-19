@@ -39,7 +39,6 @@ class Getting_data(Resource):
         with open(f'app/{k["sess"]}.txt','w') as f:
             f.write(json.dumps(linker))
 
-        print('Got it bitch')
         return {'ok':'done'},200
 # OAuth registration 
 @app.after_request
